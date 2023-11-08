@@ -1,0 +1,37 @@
+body {
+            display: flex;
+            flex-direction: column; /* Hinzufügen, um Elemente vertikal zu stapeln */
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #F0F0F0;
+        }
+
+        #game-board {
+            border: 2px solid black;
+            margin-top: 50px; /* Hinzufügen, um Platz für das Punktezählerelement zu schaffen */
+        }
+
+        #title-screen {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background-image: url("images/snake.png");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #score, #all-time-highscore {
+            font-size: 24px; /* Erhöht die Schriftgröße */
+            font-weight: bold; /* Macht den Text fetter */
+            text-align: center; /* Zentriert den Text */
+            display: none;
+        }
+
+        #game-board {
+            display: none;
+        }

@@ -1,0 +1,112 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-overlay {
+  background: url('images/background.webp') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.bg-overlay::after {
+  content: "";
+  background: #ffffff;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.game-entry {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.game-image {
+  width: 100%; /* sorgt dafür, dass das Bild die Kartenbreite ausfüllt */
+  height: 200px; /* fixe Höhe für das Bild */
+  object-fit: cover; /* stellt sicher, dass das Bild den verfügbaren Bereich ausfüllt, ohne seine Seitenverhältnisse zu verzerren */
+  border-radius: 0.25rem 0.25rem 0 0; /* abgerundete Ecken oben am Bild */
+}
+
+.game-description {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* nimmt den verbleibenden Platz in der Flex-Box ein */
+}
+
+
+
+.game-description h3 {
+  margin-top: 0.5rem; /* Abstand oben für den Titel */
+}
+
+.game-description p {
+  flex: 1; /* lässt den Absatz den verfügbaren Platz ausfüllen, sodass der Button unten bleibt */
+}
+
+.game-description .btn {
+  margin-top: 1rem; /* Abstand zum Text */
+  margin-left: auto; /* Zentriert den Button horizontal */
+  margin-right: auto; /* Zentriert den Button horizontal */
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Fügt einen Schatten für Tiefe hinzu */
+  border-radius: 10px; /* Abgerundete Ecken für die Karte */
+  overflow: hidden; /* Stellt sicher, dass das Bild an den Kanten der Karte abgeschnitten wird */
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-body {
+  text-align: center; /* Zentriert den Text und den Button im Körper der Karte */
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover; /* Stellt sicher, dass das Bild die Kartenkopf-Größe ausfüllt */
+}
+
+.card-title {
+  color: #333;
+}
+
+.card-text {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+.btn-primary {
+  margin-top: auto; /* Setzt den Button an das Ende des Card-Body */
+  width: 80%; /* Optional: Setzt eine maximale Breite für den Button */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Fügt dem Button einen Schatten hinzu */
+}
+
+.page-title, .subtitle {
+  background-color: rgba(255, 255, 255, 0.8); /* Weißer Hintergrund mit 0.8 Transparenz */
+  padding: 10px 20px; /* Etwas Polsterung um den Text */
+  border-radius: 10px; /* Abgerundete Ecken für den Hintergrund */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
+  display: block; /* Block-Element, um automatische Seitenränder zu ermöglichen */
+  margin: 20px auto; /* Zentriert das Element horizontal */
+  max-width: 80%; /* Begrenzt die maximale Breite, um die Lesbarkeit zu erhöhen */
+  box-sizing: border-box; /* Stellt sicher, dass padding und border in der Breite enthalten sind */
+  text-align: center; /* Zentriert den Text innerhalb des Elements */
+}
+
+.subtitle {
+  margin-top: 0; /* Entfernt den oberen Abstand für die Subtitle */
+  margin-bottom: 1rem; /* Etwas Abstand zum nächsten Element */
+}
